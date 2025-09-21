@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		CED37C822E7E86980062CB20 /* QRScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED37C822E7E86980062CB20 /* CodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CE88D4C12E7FEDF900B773C7 /* Exceptions for "CodeScanner" folder in "CodeScanner" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SupportingFiles/Info.plist,
+			);
+			target = CED37C812E7E86980062CB20 /* CodeScanner */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CED37C842E7E86980062CB20 /* QRScanner */ = {
+		CED37C842E7E86980062CB20 /* CodeScanner */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = QRScanner;
+			exceptions = (
+				CE88D4C12E7FEDF900B773C7 /* Exceptions for "CodeScanner" folder in "CodeScanner" target */,
+			);
+			path = CodeScanner;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +45,7 @@
 		CED37C792E7E86980062CB20 = {
 			isa = PBXGroup;
 			children = (
-				CED37C842E7E86980062CB20 /* QRScanner */,
+				CED37C842E7E86980062CB20 /* CodeScanner */,
 				CED37C832E7E86980062CB20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +53,7 @@
 		CED37C832E7E86980062CB20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CED37C822E7E86980062CB20 /* QRScanner.app */,
+				CED37C822E7E86980062CB20 /* CodeScanner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +61,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CED37C812E7E86980062CB20 /* QRScanner */ = {
+		CED37C812E7E86980062CB20 /* CodeScanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CED37C952E7E869A0062CB20 /* Build configuration list for PBXNativeTarget "QRScanner" */;
+			buildConfigurationList = CED37C952E7E869A0062CB20 /* Build configuration list for PBXNativeTarget "CodeScanner" */;
 			buildPhases = (
 				CED37C7E2E7E86980062CB20 /* Sources */,
 				CED37C7F2E7E86980062CB20 /* Frameworks */,
@@ -61,13 +74,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				CED37C842E7E86980062CB20 /* QRScanner */,
+				CED37C842E7E86980062CB20 /* CodeScanner */,
 			);
-			name = QRScanner;
+			name = CodeScanner;
 			packageProductDependencies = (
 			);
 			productName = QRScanner;
-			productReference = CED37C822E7E86980062CB20 /* QRScanner.app */;
+			productReference = CED37C822E7E86980062CB20 /* CodeScanner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CED37C7D2E7E86980062CB20 /* Build configuration list for PBXProject "QRScanner" */;
+			buildConfigurationList = CED37C7D2E7E86980062CB20 /* Build configuration list for PBXProject "CodeScanner" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CED37C812E7E86980062CB20 /* QRScanner */,
+				CED37C812E7E86980062CB20 /* CodeScanner */,
 			);
 		};
 /* End PBXProject section */
@@ -251,15 +264,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"QRScanner/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CodeScanner/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = 86SKTK882J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CodeScanner/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -280,15 +296,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"QRScanner/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CodeScanner/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = 86SKTK882J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CodeScanner/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +324,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CED37C7D2E7E86980062CB20 /* Build configuration list for PBXProject "QRScanner" */ = {
+		CED37C7D2E7E86980062CB20 /* Build configuration list for PBXProject "CodeScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CED37C932E7E869A0062CB20 /* Debug */,
@@ -314,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CED37C952E7E869A0062CB20 /* Build configuration list for PBXNativeTarget "QRScanner" */ = {
+		CED37C952E7E869A0062CB20 /* Build configuration list for PBXNativeTarget "CodeScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CED37C962E7E869A0062CB20 /* Debug */,
