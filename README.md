@@ -7,4 +7,4 @@ Swift Concurrency.**
 
 Using [Open Food Facts API](https://world.openfoodfacts.org) to fetch product information.
 
-<img width="3657" height="1809" alt="preview" src="https://github.com/user-attachments/assets/608e1934-6898-46eb-97bf-e3ccd4b002dc" />
+<img width="4876" height="2412" alt="Group 1321315454" src="https://github.com/user-attachments/assets/3b40f639-6f22-41ff-91e8-049dcbe7611e" />
