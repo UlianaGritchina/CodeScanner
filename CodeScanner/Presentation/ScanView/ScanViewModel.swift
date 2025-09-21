@@ -13,7 +13,7 @@ extension ScanView {
         
         // MARK: Published
         
-        @Published var codeDetails: CodeInfo?
+        @Published var codeInfo: CodeInfo?
         @Published var isOpenCodeDetailsView = false
         
         // MARK: Private variables
@@ -33,12 +33,12 @@ extension ScanView {
         // MARK: Private methods
         
         func addCodeDetailsListener() {
-            codeDetails = nil
-            $codeDetails.sink { [weak self] details in
+            codeInfo = nil
+            $codeInfo.sink { [weak self] details in
                 guard let self else { return }
                 DispatchQueue.main.async {
                     if let details {
-                        self.codeDetails = details
+                        self.codeInfo = details
                         self.openCodeDetailsView()
                         self.cancellables = []
                     }

@@ -14,13 +14,16 @@ struct ScanView: View {
     @StateObject private var viewModel = ViewModel()
     
     var body: some View {
-        ScannerView(scanResult: $viewModel.codeDetails)
+        ScannerView(scanResult: $viewModel.codeInfo)
             .ignoresSafeArea()
             .sheet(isPresented: $viewModel.isOpenCodeDetailsView, onDismiss: {
                 viewModel.addCodeDetailsListener()
             }) {
-                if let codeDetails = viewModel.codeDetails {
-                    CodeDetailsView(codeDetails: codeDetails)
+                if let code = viewModel.codeInfo {
+                    CodeDetailsView(
+                        code: code,
+                        foodFactsRepository: FoodFactsRepository()
+                    )
                 }
             }
     }

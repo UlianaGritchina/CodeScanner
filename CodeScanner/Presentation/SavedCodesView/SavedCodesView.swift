@@ -27,7 +27,10 @@ struct SavedCodesView: View {
                 viewModel.fetchSavedCodes()
             }) {
                 if let code = viewModel.selectedCode {
-                    CodeDetailsView(codeDetails: code)
+                    CodeDetailsView(
+                        code: code,
+                        foodFactsRepository: FoodFactsRepository()
+                    )
                 }
             }
         }

@@ -17,8 +17,8 @@ struct CodeDetailsView: View {
     
     @StateObject private var viewModel: ViewModel
     
-    init(codeDetails: CodeInfo) {
-        let vm = ViewModel(codeDetails: codeDetails)
+    init(code: CodeInfo, foodFactsRepository: IFoodFactsRepository) {
+        let vm = ViewModel(code: code,foodFactsRepository: foodFactsRepository)
         _viewModel = StateObject(wrappedValue: vm)
     }
     
@@ -54,11 +54,12 @@ struct CodeDetailsView: View {
 
 #Preview {
     CodeDetailsView(
-        codeDetails: CodeInfo(
+        code: CodeInfo(
             type: CodeType.qr,
             stringValue: "https://github.com/UlianaGritchina/EasterEggs",
             dateCreated: Date()
-        )
+        ),
+        foodFactsRepository: FoodFactsRepository()
     )
 }
 

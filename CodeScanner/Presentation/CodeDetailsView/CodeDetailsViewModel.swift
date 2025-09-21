@@ -12,7 +12,7 @@ extension CodeDetailsView {
         
         // MARK: Constants
         
-        private let foodFactsRepository = FoodFactsRepository.shared
+        private let foodFactsRepository: IFoodFactsRepository
         private let coreDataService = CoreDataService.shared
         
         let codeInfo: CodeInfo
@@ -28,9 +28,10 @@ extension CodeDetailsView {
         
         @Published var isOpenActivityView = false
         
-        init(codeDetails: CodeInfo) {
-            self.codeInfo = codeDetails
-            qrURL = URL(string: codeDetails.stringValue)
+        init(code: CodeInfo, foodFactsRepository: IFoodFactsRepository) {
+            self.codeInfo = code
+            self.foodFactsRepository = foodFactsRepository
+            qrURL = URL(string: code.stringValue)
             fetchProductInfo()
             fetchSavedCodes()
         }
@@ -42,9 +43,9 @@ extension CodeDetailsView {
             Task {
                 do {
                     product = try await foodFactsRepository.fetchProductInfo(for: codeInfo.stringValue)
+                    isFailedToLoadProduct = false
                     guard let productImageURL = product?.imageURL else { return }
                     fetchProductImage(url: productImageURL)
-                    isFailedToLoadProduct = false
                 } catch {
                     isFailedToLoadProduct = true
                 }
