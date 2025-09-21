@@ -3,7 +3,7 @@
 
 ### Technology stack:
 **SwiftUI, MVVM, CoreData, AVFoundation, URLSession, Combine,
-Swift Concurrency.**
+Swift Concurrency, iOS 15+.**
 
 Using [Open Food Facts API](https://world.openfoodfacts.org) to fetch product information.
 
